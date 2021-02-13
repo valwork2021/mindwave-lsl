@@ -5,13 +5,13 @@ import os
 import pylsl as lsl
 import uuid
 
-from mindwavelsl.connectors import TelnetConnector, MindwavePythonWrapper
-from mindwavelsl.constants import (
+from connectors import *
+from constants import (
 	EXPECTED_FIELDS,
 	MINDWAVE_PYTHON_ORIG,
 	MINDWAVE_PYTHON_FORK
 )
-from mindwavelsl.logger import MindwaveLogger
+from logger import *
 
 log = MindwaveLogger("mindwave-outlet")
 

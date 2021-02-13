@@ -1,6 +1,6 @@
 import argparse
 
-from mindwavelsl.constants import MINDWAVE_PYTHON_ORIG, MINDWAVE_PYTHON_FORK
+from constants import MINDWAVE_PYTHON_ORIG, MINDWAVE_PYTHON_FORK
 
 def mwparser():
 	"""

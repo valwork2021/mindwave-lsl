@@ -7,8 +7,8 @@ try:
 except:
 	pass
 
-from mindwavelsl.logger import MindwaveLogger
-from mindwavelsl.constants import EXPECTED_FIELDS, MINDWAVEPYTHON_MAPPINGS
+from logger import *
+from constants import EXPECTED_FIELDS, MINDWAVEPYTHON_MAPPINGS
 
 log = MindwaveLogger('mindwave-connector')
 

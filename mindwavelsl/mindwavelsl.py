@@ -6,32 +6,21 @@ import json
 import sys
 import time
 
-from mindwavelsl.parser import mwparser
-from mindwavelsl.logger import MindwaveLogger
-from mindwavelsl import MindwaveLSL
+from logger import *
+from outlet import *
 
 log = MindwaveLogger('mindwave-main')
 
 def main():
-	args = mwparser().parse_args()
-
-	log.info("Checking args...")
-	if args.mindwave_python_connect:
-		if not args.device:
-			raise Exception(
-				"--device is required when using `mindwave` to connect. "
-				"You might also need to use --headset-id."
-			)
-
 	mwlsl = MindwaveLSL(
-		args.host,
-		args.port,
-		file_outlet_path=args.output,
-		run_lsl=args.no_lsl,
-		mindwave_python_connect=args.mindwave_python_connect,
-		device=args.device,
-		headset_id=args.headset_id,
-		open_serial=args.no_open_serial
+		"localhost",
+		"13854",
+		file_outlet_path="C:/Temp/brain.csv",
+		run_lsl=True,
+		mindwave_python_connect=False,
+		device="",
+		headset_id="",
+		open_serial=True
 	)
 
 	log.info("Setting up...")
